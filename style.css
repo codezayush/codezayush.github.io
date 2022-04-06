@@ -1,15 +1,96 @@
-*{
+* {
 	padding: 0;
 	margin: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap');
-
-body{
-	font-family: 'Send Flowers', cursive;
+header {
+	font-family: system-ui;
+	display: flex;
+	position: fixed;
+	padding: 0% 5%;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #80f;
+	justify-content: space-between;
+	user-select: none;
+	-webkit-user-select: none;
 }
 
-body > h1{
-	text-align: center;
+header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+header ul {
+	list-style: none;
+}
+
+header>a {
+	padding: 10px 15px;
+	display: block;
+}
+
+#menu {
+	display: none;
+}
+
+header>label {
+	display: none;
+}
+
+header>label {
+	color: #fff;
+	padding: 10px 15px;
+}
+
+header #nav ul li {
+	display: inline-block;
+	position: relative;
+}
+
+header #nav ul li a {
+	display: block;
+	padding: 10px 15px;
+	transition: all .4s ease;
+}
+
+header #nav ul li a:hover {
+	background-color: #88f;
+}
+
+@media only screen and (max-width: 768px) {
+	header>label {
+		display: initial;
+	}
+
+	header #nav {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		right: 0;
+		background-color: #80f;
+		display: none;
+	}
+
+	header #nav ul li {
+		width: 50vw;
+		text-align: center;
+	}
+
+	#menu:checked~#nav {
+		display: initial;
+	}
+}
+
+#titlech {
+	padding: 10px;
+	border-radius: 25px;
+	border: none;
+	background-color: #088;
+	cursor: pointer;
+	color: #fff;
 	margin-top: 30vh;
+	margin-left: 40vw;
 }
